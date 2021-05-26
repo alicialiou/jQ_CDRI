@@ -37,9 +37,12 @@
 
     <script>
         // $('.item002').parent().css('border', '1px solid #ccc');
+        // $('.item002').parent().parent().parent().parent().css('border', '1px solid #ccc');
 
-        // $('.item002').parents().css('border', '1px solid #ccc');
-        $('.item002').parentsUntil('.row').css('border', '1px solid #ccc');
+        // 遍壢
+        //1 > 9個爸爸 > equal 2 又只剩一個
+        $('.item002').parents().eq(2).css('border', '1px solid #ccc');
+        // $('.item002').parentsUntil('.row').css('border', '1px solid #ccc');
     </script>
 </body>
 
