@@ -80,6 +80,22 @@
             <li></li>
         </ul>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.slider-dots li').mouseenter(function () {
+            console.log('hi mouseenter', $(this));
+            console.log('hi mouseenter', $(this).index());
+
+            $(this).css('background', '#fff').siblings().css('background', 'transparent');
+
+            // ES6 樣板字串 `string`  'string'
+            const myX = -800 * $(this).index();
+            $('.img-wrap').css('transform', `translateX(${myX}px)`);
+        });
+    </script>
 </body>
 
 </html>
