@@ -40,9 +40,16 @@
         // 1.知道現在的 scollTop 是多少？
         // 2.我需要知道 scollTop 佔螢幕高度的百分比是多少？（分子、分母？）
         // 3.拿這個百分比，去修改 .box CSS 的 width 即可。
-
+        const windowHeight = $(window).height();
+        const bodyHeight = $('body').height();
         $(window).scroll(function () {
             console.log('scollTop', $(window).scrollTop());
+            console.log('bodyHeight', bodyHeight);
+            console.log('windowHeight', windowHeight);
+            console.log('scollTop/bodyHeight', Math.floor(($(window).scrollTop() / (bodyHeight - windowHeight)) * 100));
+
+            const persent = Math.floor(($(window).scrollTop() / (bodyHeight - windowHeight)) * 100);
+            $('.box').css('width', persent + '%');
         });
     </script>
 </body>
