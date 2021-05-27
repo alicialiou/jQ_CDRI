@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data type</title>
+</head>
+
+<body>
+    <script>
+        // 簡單類別
+        // number, string, boolean
+
+        //NaN not a Number
+
+        // 宣告變數 var, let, const 後兩個是 ES6 之後才有的
+        // 作用域, 這個變數的生效範圍, 分為：全域變數, 區域變數
+
+        // 全域變數會放在 window 底下
+        var c = 30;
+        let d = 40;
+
+        function foo() {
+            // 區域變數
+            var a = 10;
+            let b = 20;
+            console.log('a', a);
+            console.log('b', b);
+            console.log('c', c);
+            console.log('d', d);
+
+            return;
+        }
+
+        // 複雜類型
+        // 陣列 array, 物件 object
+
+        //陣列：
+        // 我想要用一個類似藥盒子，把資料有順序的裝在陣列裡面
+        // ['a', 'b', 'c', 'd'];
+        const myArray = ['a', 'b', 'c', 'd'];
+        console.log(myArray[0]); //'a'  
+        console.log(myArray.length); //4
+
+        const myArray2 = ['a', ['b1', 'b2', 'b3'], 'c', 'd'];
+        console.log(myArray2[1]); //["b1", "b2", "b3"]  
+        console.log(myArray2.length); //4
+
+        console.log(myArray2[1][0]); //b1
+        console.log(myArray2[1][1]); //b2
+        console.log(myArray2[1][2]); //b3
+
+        //物件：
+        // 圖書館管理員，依據你給的 key, 拿一個 value 值給你
+
+        const myObj = { name: 'John', age: 28, height: 180 }
+        // 點表示法
+        console.log(myObj.name); //'John'
+        // 中括號表示法
+        console.log(myObj['name']); //'John'
+
+
+        const myObj3 = { students: ['John', 'Anny', 'Alex'], age: [28, 16, 33], height: [180, 150, 210] }
+        // 點表示法
+        console.log(myObj3.students); //'John'
+        // 中括號表示法
+        console.log(myObj3['age']); //'John'
+    </script>
+</body>
+
+</html>
