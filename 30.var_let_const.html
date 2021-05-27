@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const</title>
+</head>
+
+<body>
+    <script>
+
+        // console.log('x', x);
+        // console.log('y', y);
+
+        // ES5 以前都是用 var 來宣告變數，會提昇(hoist)
+        // ES6 之後一分為二，一個是 let, 另一個 const
+        var x = 10;
+        var y = "abc";
+
+        // console.log('x', x);
+        // console.log('y', y);
+
+        // console.log('a', a);
+        // ES6 var 改成 let, 暫時死區裡面不能使用該變數, 也可以重新賦值。
+        // ES6 另一個宣告變數是用 const 不可以重新賦值，減少 bug 的產生。
+        let a = 10;
+        // console.log('a', a);
+
+        const b = 10;
+        // console.log('b', b);
+
+        a = 12;
+        // console.log('a', a);
+
+        // 不可以重新賦值，是指記憶體位置不能改，不代表該記憶體位置存放的內容不能變。
+        const myArray = [0, 1, 2];
+        myArray[3] = 3;
+        // console.log('myArray', myArray);
+
+        function checkUserEmail() {
+            console.log('abc');
+        }
+
+        checkUserEmail();
+
+        const def = function () {
+            console.log('hi def');
+        };
+
+        def();
+
+    </script>
+</body>
+
+</html>
